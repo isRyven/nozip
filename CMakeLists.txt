@@ -9,5 +9,5 @@ elseif (CMAKE_C_COMPILER_ID MATCHES "MSVC")
   set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -D_CRT_SECURE_NO_WARNINGS")
 endif()
 
-add_library(nozip OBJECT src/nozip.c)
-add_executable(myunzip src/unzip.c $<TARGET_OBJECTS:nozip>)
+add_library(nozip OBJECT src/nozip.c src/nozip.h)
+add_executable(unzip src/unzip.c $<TARGET_OBJECTS:nozip>)
