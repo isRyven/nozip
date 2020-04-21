@@ -7,7 +7,8 @@
 #include <string.h>
 #include <time.h>
 
-int main(int argc, char **argv) {
+int main(int argc, char **argv) 
+{
     if (argc < 3) {
         fprintf(stderr, "usage: %s [-lvx] file [file ...]\n", argv[0]);
         return EXIT_FAILURE;
